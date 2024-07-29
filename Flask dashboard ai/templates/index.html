@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:beige;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #353150;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.hero {
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>TELCO CUSTOMER CHURN PREDICTION</h1>
+    </header>
+    <form class="form" action="/submit" method="post">
+        <label for="OnlineSecurity">Online Security:</label>
+        <select id="OnlineSecurity" name="OnlineSecurity">
+            <option value="yes">Yes</option>
+            <option value="no">no</option>
+        </select>
+        <br><br>
+        
+        <label for="Contract">Contract:</label>
+        <select id="Contract" name="Contract">
+            <option value="1_year">1 Year</option>
+            <option value="2_year">2 Year</option>
+            <option value="month_to_month">month-to-month</option>
+        </select>
+        <br><br>
+
+        <label for="TotalCharges">Total Charges:</label>
+        <input type="number" id="TotalCharges" name="TotalCharges" step="0.01" required>
+        <br><br>
+
+        <label for="tenure">Tenure:</label>
+        <input type="number" id="tenure" name="tenure" required>
+        <br><br>
+
+        <label for="MonthlyCharges">Monthly Charges:</label>
+        <input type="number" id="MonthlyCharges" name="MonthlyCharges" step="0.01" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <footer class="footer">
+        <p>&copy; 2024 TELCO-CUSTOMER-CHURN</p>
+    </footer>
+</body>
+</html>
